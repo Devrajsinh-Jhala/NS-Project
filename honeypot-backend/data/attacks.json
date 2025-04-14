@@ -4369,5 +4369,202 @@
       ]
     },
     "attack_hash": "44c3ba95305d8f2e12370e7d45f01e76"
+  },
+  "69fa8edb-693f-408d-99cf-06369f0c83ca": {
+    "id": "69fa8edb-693f-408d-99cf-06369f0c83ca",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:03.140421",
+    "source_ip": "52.60.176.189",
+    "attack_type": "dos",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "request_count": 1252,
+      "request_rate": 113,
+      "target_resource": "/login",
+      "raw_log": "2025-04-14T19:14:03.140421 [HoneyPotDDoS,0,52.60.176.189] DoS attempt: 1252 requests at 113/sec to /login"
+    },
+    "attack_hash": "782d143ef11ff6638af848314aefa29c"
+  },
+  "7575f9fd-99dc-4e36-b179-a06647cf256d": {
+    "id": "7575f9fd-99dc-4e36-b179-a06647cf256d",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:09.489664",
+    "source_ip": "228.150.72.93",
+    "attack_type": "dos",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "request_count": 1469,
+      "request_rate": 70,
+      "target_resource": "/login",
+      "raw_log": "2025-04-14T19:14:09.489664 [HoneyPotDDoS,0,228.150.72.93] DoS attempt: 1469 requests at 70/sec to /login"
+    },
+    "attack_hash": "1f1877ec9f67e6b23543e5b698fe836f"
+  },
+  "8bf2de30-73f3-434a-8a83-d93d0dd78c11": {
+    "id": "8bf2de30-73f3-434a-8a83-d93d0dd78c11",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:16.458528",
+    "source_ip": "103.229.65.22",
+    "attack_type": "dos",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "request_count": 1492,
+      "request_rate": 138,
+      "target_resource": "/login",
+      "raw_log": "2025-04-14T19:14:16.458528 [HoneyPotDDoS,0,103.229.65.22] DoS attempt: 1492 requests at 138/sec to /login"
+    },
+    "attack_hash": "8728a3f2c4278520f262a3445805dd80"
+  },
+  "b9014c74-637b-47bb-aca7-57b19f23fd79": {
+    "id": "b9014c74-637b-47bb-aca7-57b19f23fd79",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:22.820343",
+    "source_ip": "146.155.1.78",
+    "attack_type": "xss",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "payload": "<script>alert('XSS')</script>",
+      "target_field": "search",
+      "raw_log": "2025-04-14T19:14:22.820343 [HoneyPotWeb,0,146.155.1.78] XSS attempt: <script>alert('XSS')</script>"
+    },
+    "attack_hash": "20ec0bca44e64ca4ff648a6cf0fe3ab7"
+  },
+  "e096eda7-7bc2-4532-bcea-4df8f16d14a6": {
+    "id": "e096eda7-7bc2-4532-bcea-4df8f16d14a6",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:30.597290",
+    "source_ip": "168.209.92.201",
+    "attack_type": "dos",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "request_count": 650,
+      "request_rate": 181,
+      "target_resource": "/login",
+      "raw_log": "2025-04-14T19:14:30.597290 [HoneyPotDDoS,0,168.209.92.201] DoS attempt: 650 requests at 181/sec to /login"
+    },
+    "attack_hash": "be4efb2a01b7620f514d8a94143ab050"
+  },
+  "274246e5-c7f7-46c7-93b5-64d695e78d14": {
+    "id": "274246e5-c7f7-46c7-93b5-64d695e78d14",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:37.322431",
+    "source_ip": "150.29.113.69",
+    "attack_type": "dos",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "request_count": 1303,
+      "request_rate": 156,
+      "target_resource": "/login",
+      "raw_log": "2025-04-14T19:14:37.322431 [HoneyPotDDoS,0,150.29.113.69] DoS attempt: 1303 requests at 156/sec to /login"
+    },
+    "attack_hash": "2574ef28d0b1b988da30748a576dc160"
+  },
+  "f0ec3b0f-f9aa-4146-a0ea-c5bf0b618170": {
+    "id": "f0ec3b0f-f9aa-4146-a0ea-c5bf0b618170",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:43.314650",
+    "source_ip": "7.164.41.145",
+    "attack_type": "xss",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "payload": "<body onload='alert(\"XSS\")'>",
+      "target_field": "search",
+      "raw_log": "2025-04-14T19:14:43.314650 [HoneyPotWeb,0,7.164.41.145] XSS attempt: <body onload='alert(\"XSS\")'>"
+    },
+    "attack_hash": "1c66f55dd6e9057cd1bccdea548f8145"
+  },
+  "dba3d5f3-c573-41f0-bda9-c548931650ea": {
+    "id": "dba3d5f3-c573-41f0-bda9-c548931650ea",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:50.322894",
+    "source_ip": "242.24.22.242",
+    "attack_type": "xss",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "payload": "<img src='x' onerror='alert(1)'>",
+      "target_field": "email",
+      "raw_log": "2025-04-14T19:14:50.322894 [HoneyPotWeb,0,242.24.22.242] XSS attempt: <img src='x' onerror='alert(1)'>"
+    },
+    "attack_hash": "36a87da4db68924abd1f71e1802901af"
+  },
+  "0b53c485-78bb-4ca2-8d10-caaf847c05bd": {
+    "id": "0b53c485-78bb-4ca2-8d10-caaf847c05bd",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 19:14:57.007531",
+    "source_ip": "130.168.131.184",
+    "attack_type": "xss",
+    "username": null,
+    "password": null,
+    "details": {
+      "simulated": true,
+      "complexity": "basic",
+      "payload": "<body onload='alert(\"XSS\")'>",
+      "target_field": "email",
+      "raw_log": "2025-04-14T19:14:57.007531 [HoneyPotWeb,0,130.168.131.184] XSS attempt: <body onload='alert(\"XSS\")'>"
+    },
+    "attack_hash": "ad71902374465b43e3d9af3d33d18a35"
+  },
+  "d4d40a49-6906-49c6-9c0f-20dff04d6753": {
+    "id": "d4d40a49-6906-49c6-9c0f-20dff04d6753",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 13:45:07",
+    "source_ip": "172.17.0.1]",
+    "attack_type": "login_attempt",
+    "username": "honeypot",
+    "password": "as",
+    "details": {
+      "raw_log": "2025-04-14T13:45:07+0000 [HoneyPotSSHTransport,0,172.17.0.1] login attempt [b'honeypot'/b'as'] failed"
+    },
+    "attack_hash": "db8ec8c421476f89c383166393a1811b"
+  },
+  "0f736a53-31a7-4da2-b46e-17f234d61338": {
+    "id": "0f736a53-31a7-4da2-b46e-17f234d61338",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 13:45:09",
+    "source_ip": "172.17.0.1]",
+    "attack_type": "login_attempt",
+    "username": "honeypot",
+    "password": "a",
+    "details": {
+      "raw_log": "2025-04-14T13:45:09+0000 [HoneyPotSSHTransport,0,172.17.0.1] login attempt [b'honeypot'/b'a'] failed"
+    },
+    "attack_hash": "9b1d2f667fbf3c01b486c954168f5624"
+  },
+  "2f2a9575-ca1f-4ef5-baea-d0b42e44055a": {
+    "id": "2f2a9575-ca1f-4ef5-baea-d0b42e44055a",
+    "honeypot_id": "4765915d-a415-4868-b0a9-b01e0dafa0b5",
+    "timestamp": "2025-04-14 13:45:11",
+    "source_ip": "172.17.0.1]",
+    "attack_type": "login_attempt",
+    "username": "honeypot",
+    "password": "b",
+    "details": {
+      "raw_log": "2025-04-14T13:45:11+0000 [HoneyPotSSHTransport,0,172.17.0.1] login attempt [b'honeypot'/b'b'] failed"
+    },
+    "attack_hash": "c832d6280a522ef3e0f2f7d6eae03737"
   }
 }

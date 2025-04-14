@@ -66,7 +66,7 @@ export default function HoneypotListPage() {
             name="honeypot-search"
             id="honeypot-search"
             className="block w-full rounded-md border-0 py-2 pl-10 pr-3 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
-            placeholder="Search by name, type, IP, or status..."
+            placeholder="Search by name..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)} // Update state on change
           />
