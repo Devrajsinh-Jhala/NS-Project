@@ -26,9 +26,10 @@ export default function AIInsightsPanel({ honeypotId }: AIInsightsPanelProps) {
   const fetchAnalysis = async (days: number = 7) => {
     setIsLoading(true);
     try {
-      const response = await fetch(
-        `http://localhost:8000/ai/analysis?days=${days}`
-      );
+      const url = honeypotId
+      ? `http://localhost:8000/ai/analysis?days=${days}&honeypot_id=${honeypotId}`
+      : `http://localhost:8000/ai/analysis?days=${days}`;
+      const response = await fetch(url);
       const data = await response.json();
 
       if (response.ok) {

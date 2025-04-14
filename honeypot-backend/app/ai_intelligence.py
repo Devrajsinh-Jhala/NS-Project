@@ -81,12 +81,13 @@ class AIThreatIntelligence:
             'expires': time.time() + ttl
         }
     
-    async def analyze_recent_attacks(self, days: int = 7) -> Dict[str, Any]:
+    async def analyze_recent_attacks(self, days: int = 7, honeypot_id: Optional[str] = None) -> Dict[str, Any]:
         """Analyze recent attacks with smart caching and rate limiting"""
         # Create cache key based on parameters
-        cache_key = f"analysis_{days}"
+        cache_key = f"analysis_{days}_{honeypot_id if honeypot_id else 'all'}"
         
         # Check cache first
+        
         cached = self._get_cached_response(cache_key)
         if cached:
             return cached
