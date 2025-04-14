@@ -54,10 +54,10 @@ export default function LandingPage() {
 
           <nav className="hidden md:flex space-x-8">
             <Link
-              href="/"
+              href="/honeypots"
               className="text-white/80 hover:text-white transition"
             >
-              Home
+              Honeypots
             </Link>
             <Link
               href="/dashboard"

@@ -127,7 +127,7 @@ export default function CreateHoneypotPage() {
                   className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 shadow-sm bg-white"
                 >
                   <option value="SSH">SSH</option>
-                  <option value="FTP">FTP</option>
+                  {/* <option value="FTP">FTP</option> */}
                   <option value="Web">Web</option>
                 </select>
               </div>

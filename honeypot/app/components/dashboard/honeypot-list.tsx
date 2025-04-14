@@ -5,7 +5,12 @@ import { useState, useEffect } from "react";
 import { Honeypot, getAllHoneypots } from "@/lib/api-client";
 import HoneypotCard from "./honeypot-card";
 
-export default function HoneypotList() {
+// Add interface for component props
+interface HoneypotListProps {
+  searchQuery?: string; // Make it optional for backward compatibility
+}
+
+export default function HoneypotList({ searchQuery = "" }: HoneypotListProps) {
   const [honeypots, setHoneypots] = useState<Honeypot[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -27,6 +32,25 @@ export default function HoneypotList() {
   useEffect(() => {
     loadHoneypots();
   }, []);
+
+  // Filter honeypots based on searchQuery
+  const filteredHoneypots = honeypots.filter((honeypot) => {
+    if (!searchQuery) return true; // If no search query, include all honeypots
+
+    const query = searchQuery.toLowerCase();
+
+    // Check if any honeypot property contains the search query
+    return (
+      honeypot.name?.toLowerCase().includes(query) ||
+      honeypot.type?.toLowerCase().includes(query) ||
+      honeypot.ip_address?.toLowerCase().includes(query) ||
+      honeypot.status?.toLowerCase().includes(query) ||
+      honeypot.emulated_system?.toLowerCase().includes(query) ||
+      honeypot.container_id?.toLowerCase().includes(query) ||
+      String(honeypot.internal_port)?.includes(query) ||
+      String(honeypot.mapped_port)?.includes(query)
+    );
+  });
 
   if (loading) {
     return (
@@ -63,6 +87,7 @@ export default function HoneypotList() {
     );
   }
 
+  // No honeypots at all
   if (honeypots.length === 0) {
     return (
       <div className="text-center py-8">
@@ -71,9 +96,29 @@ export default function HoneypotList() {
     );
   }
 
+  // Honeypots exist but none match the search criteria
+  if (filteredHoneypots.length === 0 && searchQuery) {
+    return (
+      <div className="text-center py-8 border border-gray-200 rounded-lg p-6 bg-white">
+        <p className="text-gray-600 font-medium text-lg">
+          No matching honeypots
+        </p>
+        <p className="text-gray-500 mt-2">
+          No honeypots match your search query: "{searchQuery}"
+        </p>
+        <button
+          onClick={() => window.location.reload()}
+          className="mt-4 text-sky-600 hover:text-sky-800 text-sm font-medium"
+        >
+          Clear search and show all honeypots
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-4">
-      {honeypots.map((honeypot) => (
+      {filteredHoneypots.map((honeypot) => (
         <HoneypotCard
           key={honeypot.id}
           honeypot={honeypot}

@@ -202,6 +202,7 @@ class DockerService:
         try:
             logs = self.get_container_logs(container_id)
             
+            
             if honeypot_type.lower() == "ssh":
                 # Parse SSH honeypot logs (Cowrie)
                 for line in logs.splitlines():
@@ -251,16 +252,19 @@ class DockerService:
             elif honeypot_type.lower() == "ftp":
                 # Parse FTP honeypot logs
                 # First, try to extract info from the logs directly
+                
                 for line in logs.splitlines():
                     # Debug the actual log content to see what's available
                     logger.debug(f"FTP log line: {line}")
+                    
                     
                     # Look for various FTP authentication patterns
                     if any(pattern in line.lower() for pattern in [
                         "authentication failed",
                         "user", 
                         "password required",
-                        "unable to read the indexed puredb"
+                        "unable to read",
+                        "indexed puredb"
                     ]):
                         # Extract username - try various patterns
                         username = "unknown"
